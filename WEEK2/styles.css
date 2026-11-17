@@ -1,0 +1,277 @@
+
+/* BODY */
+body {
+    background-color: #FFF5E6;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    color: #333;
+}
+
+/* GRID CONTAINER */
+.container {
+    display: grid;
+
+    grid-template-areas:
+        "header header header"
+        "menu content right"
+        "footer footer footer";
+
+    grid-template-columns: 1fr 2fr 1.5fr;
+
+    gap: 10px;
+
+    background-color: #C62828;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* ALL DIVS */
+.container div {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* HEADER */
+.container div.header {
+    grid-area: header;
+    text-align: center;
+    background-color: #B71C1C;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.header h1 {
+    color: white;
+    margin-bottom: 8px;
+}
+
+.header p {
+    color: #FFE0B2;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.school-title {
+    background-color: transparent !important;
+}
+
+/* LEFT SIDE / MENU */
+.container div.menu {
+    grid-area: menu;
+    background-color: #FFE0B2;
+}
+
+.menu h2 {
+    color: #B71C1C;
+    margin-bottom: 20px;
+}
+
+.menu a {
+    display: block;
+    background-color: #C62828;
+    color: white;
+    padding: 12px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background-color: #EF6C00;
+}
+
+/* CENTER CONTENT */
+.container div.content {
+    grid-area: content;
+    line-height: 1.6;
+}
+
+.content h2 {
+    color: #C62828;
+    margin-bottom: 15px;
+}
+
+.content p {
+    margin-bottom: 12px;
+}
+
+.content hr {
+    border: none;
+    height: 3px;
+    background-color: #FFB74D;
+    margin: 20px 0;
+}
+
+.content ul {
+    padding-left: 25px;
+}
+
+.content li {
+    margin-bottom: 8px;
+}
+
+/* WELCOME TEXT */
+.welcome {
+    color: #E65100;
+    font-weight: bold;
+}
+
+/* SCHOOL IMAGE */
+.school-image {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    float: right;
+    margin-left: 10px;
+    border-radius: 8px;
+}
+
+/* RIGHT SIDE */
+.container div.right {
+    grid-area: right;
+    background-color: #FFF3E0;
+}
+
+.right h2 {
+    color: #BF360C;
+    margin-bottom: 15px;
+}
+
+/* FORM */
+form {
+    background-color: #FFE0B2;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #8E1B1B;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #E0A15A;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #EF6C00;
+    box-shadow: 0 0 5px rgba(239, 108, 0, 0.2);
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* BUTTON */
+button {
+    background-color: #C62828;
+    color: white;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #EF6C00;
+}
+
+/* FOOTER */
+.container div.footer {
+    grid-area: footer;
+    text-align: center;
+    background-color: #8E1B1B;
+    color: white;
+}
+
+.footer h3 {
+    color: #FFCC80;
+    margin-bottom: 8px;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+
+    .container {
+        grid-template-areas:
+            "header"
+            "menu"
+            "content"
+            "right"
+            "footer";
+
+        grid-template-columns: 1fr;
+    }
+
+    .school-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    body {
+        margin: 8px;
+    }
+
+    .header {
+        flex-direction: column;
+    }
+
+    .header h1 {
+        font-size: 21px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .content,
+    .menu,
+    .right {
+        padding: 18px;
+    }
+
+    .school-image {
+        float: none;
+        display: block;
+        margin: 10px auto;
+        max-width: 100%;
+    }
+}

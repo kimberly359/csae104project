@@ -1,0 +1,163 @@
+/* BODY */
+body {
+    background-color: #EAF5E9;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* GRID CONTAINER */
+.container {
+    display: grid;
+
+    grid-template-areas:
+        "header header header"
+        "menu content right"
+        "footer footer footer";
+
+    grid-template-columns: 1fr 2fr 1.5fr;
+
+    gap: 5px;
+
+    background-color: #38734A;
+    padding: 5px;
+}
+
+/* ALL DIVS */
+.container div {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* HEADER */
+.container div.header {
+    grid-area: header;
+    text-align: center;
+    background-color: #C8E6C9;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+/* LEFT SIDE */
+.container div.menu {
+    grid-area: menu;
+    background-color: #D8EED8;
+}
+
+.menu a {
+    display: block;
+    background-color: #38734A;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.menu a:hover {
+    background-color: #245333;
+}
+
+/* CENTER CONTENT */
+.container div.content {
+    grid-area: content;
+}
+
+.content h2 {
+    color: #38734A;
+}
+
+/* RIGHT SIDE */
+.container div.right {
+    grid-area: right;
+    background-color: #F5FBF4;
+}
+
+.right h2 {
+    color: #38734A;
+}
+
+/* PHILIPPINES IMAGE */
+.philippines {
+    float: right;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+/* FORM */
+form {
+    background-color: #D8EED8;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #245333;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #91BC98;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    background-color: #38734A;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #245333;
+}
+
+/* FOOTER */
+.container div.footer {
+    grid-area: footer;
+    text-align: center;
+    background-color: #245333;
+    color: white;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+
+    .container {
+        grid-template-areas:
+            "header"
+            "menu"
+            "content"
+            "right"
+            "footer";
+
+        grid-template-columns: 1fr;
+    }
+
+    .philippines {
+        width: 150px;
+        height: 150px;
+    }
+
+    body {
+        margin: 8px;
+    }
+}

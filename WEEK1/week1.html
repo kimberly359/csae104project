@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMMMSU Campus Notices</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- 1. HEADER -->
+        <div class="header">
+
+            <img src="dmmmsulogo.png" class="logo" alt="DMMMSU Logo">
+
+            <h2>Don Mariano Marcos Memorial State University</h2>
+        </div>
+
+
+        <!-- 2. LEFT SIDE / MENU -->
+        <div class="menu">
+
+            <h2>Menu</h2>
+
+            <a href="week1.html">Home</a>
+            <a href="#">About</a>
+            <a href="#">Context</a>
+
+        </div>
+
+
+        <!-- 3. CENTER / CONTENT -->
+        <div class="content">
+
+            <h2>Campus Notices</h2>
+
+            <p>
+                Welcome to DMMMSU Campus Notices!
+                Stay updated with the latest campus announcements.
+            </p>
+
+            <p>Hail beloved alma mater!</p>
+
+            <hr>
+
+            <h2>Faculty Members</h2>
+
+            <img src="pilipinas.jpeg" class="philippines"
+                 alt="Map of the Philippines">
+
+            <ul>
+                <li>Maam Haydee</li>
+                <li>Sir Cha</li>
+                <li>Sir Z</li>
+            </ul>
+
+        </div>
+
+
+        <!-- 4. RIGHT SIDE -->
+        <div class="right">
+
+            <form action="/api/notices" method="post">
+
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Post Notice</button>
+
+            </form>
+
+        </div>
+
+
+        <!-- 5. FOOTER -->
+        <div class="footer">
+
+            <h3>College of Computer Science</h3>
+            <p>Don Mariano Marcos Memorial State University</p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

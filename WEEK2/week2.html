@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Fabian National High School - Campus Notices</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- 1. HEADER -->
+        <div class="header">
+
+            <img src="sfnhs.jpg" class="logo" alt="SFNHS Logo">
+
+            <div class="school-title">
+                <h1>San Fabian National High School</h1>
+                <p>Excellence, Discipline, and Service</p>
+            </div>
+
+        </div>
+
+
+        <!-- 2. LEFT SIDE / MENU -->
+        <div class="menu">
+
+            <h2>Menu</h2>
+
+            <a href="week2.html">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Announcements</a>
+            <a href="#">Contact</a>
+
+        </div>
+
+
+        <!-- 3. CENTER / CONTENT -->
+        <div class="content">
+
+            <h2>Campus Notices</h2>
+
+            <p>
+                Welcome to San Fabian National High School Campus Notices!
+                Stay informed and updated with the latest school
+                announcements, activities, and important reminders.
+            </p>
+
+            <p class="welcome">
+                Together, let's learn, grow, and achieve excellence!
+            </p>
+
+            <hr>
+
+            <h2>Our School</h2>
+
+            <img src="sfnhs.jpg" class="school-image"
+                 alt="San Fabian National High School">
+
+            <p>
+                San Fabian National High School is committed to providing
+                quality education and developing responsible,
+                knowledgeable, and productive students.
+            </p>
+
+            <p>
+                We encourage every student to work hard, respect others,
+                and participate in school activities.
+            </p>
+
+            <hr>
+
+            <h2>School Reminders</h2>
+
+            <ul>
+                <li>Always wear your proper school uniform.</li>
+                <li>Practice cleanliness and discipline.</li>
+                <li>Attend classes on time.</li>
+                <li>Respect teachers, classmates, and school personnel.</li>
+                <li>Always follow school rules and regulations.</li>
+            </ul>
+
+        </div>
+
+
+        <!-- 4. RIGHT SIDE / POST NOTICE -->
+        <div class="right">
+
+            <h2>Post a Notice</h2>
+
+            <form action="/api/notices" method="post">
+
+                <label for="title">Notice Title</label>
+
+                <input type="text"
+                       id="title"
+                       name="title"
+                       placeholder="Enter notice title"
+                       required>
+
+                <label for="message">Notice Message</label>
+
+                <textarea id="message"
+                          name="message"
+                          placeholder="Write your announcement here..."
+                          required></textarea>
+
+                <button type="submit">Post Notice</button>
+
+            </form>
+
+        </div>
+
+
+        <!-- 5. FOOTER -->
+        <div class="footer">
+
+            <h3>San Fabian National High School</h3>
+
+            <p>Committed to Quality Education and Excellence</p>
+
+            <p>&copy; 2026 SFNHS. All Rights Reserved.</p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
